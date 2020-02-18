@@ -1,0 +1,46 @@
+{
+  "date": {
+    "format": {
+      "lang": "es",
+      "long": "dd MMMM yyyy",
+      "short": "DD/MM/YYYY"
+    }
+  },
+  "currency": {
+    "format": {
+      "symbol": "$",
+      "precision": 0,
+      "separator": ".",
+      "decimal": ",",
+      "formatWithSymbol": true
+    }
+  },
+  "card-quotas": {
+    "authorized": "Autorizado",
+    "used": "Utilizado"
+  },
+  "commons": {
+    "number": "Nº {n}",
+    "view-transactions": "Movimientos"
+  },
+  "main": {
+    "add-product-btn": "Agregar Producto",
+    "title": "Resumen de Cuentas"
+  },
+  "account": {
+    "available-balance": "Monto Disponible",
+    "credit-line": "Línea de Crédito",
+    "current-balance": "Saldo disponible",
+    "deposits": "Total Abonos",
+    "transfer": "Transferir",
+    "withdrawals": "Total Cargos"
+  },
+  "card": {
+    "international-availability": "Disponible Internacional",
+    "national-availability": "Disponible Nacional",
+    "pay": "Pagar"
+  },
+  "transactions": {
+    "recent-activity": "Últimos Movimientos"
+  }
+}

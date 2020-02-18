@@ -1,0 +1,30 @@
+{
+  "card-quotas": {
+    "authorized": "@@@",
+    "used": "@@@"
+  },
+  "commons": {
+    "number": "@@@ {n}",
+    "view-transactions": "@@@"
+  },
+  "main": {
+    "add-product-btn": "@@@",
+    "title": "@@@"
+  },
+  "account": {
+    "available-balance": "@@@",
+    "credit-line": "@@@",
+    "current-balance": "@@@",
+    "deposits": "@@@",
+    "transfer": "@@@",
+    "withdrawals": "@@@"
+  },
+  "card": {
+    "international-availability": "@@@",
+    "national-availability": "@@@",
+    "pay": "@@@"
+  },
+  "transactions": {
+    "recent-activity": "@@@"
+  }
+}
