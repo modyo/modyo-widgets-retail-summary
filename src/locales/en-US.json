@@ -1,32 +1,4 @@
 {
-  "date": {
-    "format": {
-      "lang": "en",
-      "long": "MMMM dd, yyyy",
-      "short": "MM/DD/YYYY"
-    }
-  },
-  "currency": {
-    "format": {
-      "symbol": "US$",
-      "precision": 2,
-      "separator": ",",
-      "decimal": ".",
-      "formatWithSymbol": true
-    }
-  },
-  "card-quotas": {
-    "authorized": "Credit Line",
-    "used": "Current Balance"
-  },
-  "commons": {
-    "number": "Nº {n}",
-    "view-transactions": "Transactions"
-  },
-  "main": {
-    "add-product-btn": "Add Product",
-    "title": "Account Balances"
-  },
   "account": {
     "available-balance": "Available Balance",
     "credit-line": "Line of Credit",
@@ -39,6 +11,34 @@
     "international-availability": "Internacional Available Credit",
     "national-availability": "National Available Credit",
     "pay": "Pay"
+  },
+  "card-quotas": {
+    "authorized": "Credit Line",
+    "used": "Current Balance"
+  },
+  "commons": {
+    "number": "Nº {n}",
+    "view-transactions": "Transactions"
+  },
+  "currency": {
+    "format": {
+      "decimal": ".",
+      "formatWithSymbol": true,
+      "precision": 2,
+      "separator": ",",
+      "symbol": "US$"
+    }
+  },
+  "date": {
+    "format": {
+      "lang": "en",
+      "long": "MMMM dd, yyyy",
+      "short": "MM/DD/YYYY"
+    }
+  },
+  "main": {
+    "add-product-btn": "Add Product",
+    "title": "Account Balances"
   },
   "transactions": {
     "recent-activity": "Recent activity"
