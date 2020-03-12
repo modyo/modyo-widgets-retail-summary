@@ -8,12 +8,12 @@
     "withdrawals": "Withdrawals"
   },
   "card": {
-    "international-availability": "Internacional Available Credit",
+    "international-availability": "International Available Credit",
     "national-availability": "National Available Credit",
     "pay": "Pay"
   },
   "card-quotas": {
-    "authorized": "Credit Line",
+    "authorized": "Available Credit",
     "used": "Current Balance"
   },
   "commons": {
@@ -32,8 +32,12 @@
   "date": {
     "format": {
       "lang": "en",
+      "last-3-months": "Last 3 months",
+      "last-6-months": "Last 6 months",
+      "last-month": "Last month",
       "long": "MMMM dd, yyyy",
-      "short": "MM/DD/YYYY"
+      "short": "MM/DD/YYYY",
+      "this-month": "This month"
     }
   },
   "main": {

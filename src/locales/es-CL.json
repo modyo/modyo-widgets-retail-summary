@@ -32,8 +32,12 @@
   "date": {
     "format": {
       "lang": "es",
+      "last-3-months": "Últimos 3 meses",
+      "last-6-months": "Últimos 6 meses",
+      "last-month": "Mes pasado",
       "long": "dd MMMM yyyy",
-      "short": "DD/MM/YYYY"
+      "short": "DD/MM/YYYY",
+      "this-month": "Este mes"
     }
   },
   "main": {
