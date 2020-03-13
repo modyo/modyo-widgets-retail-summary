@@ -4,9 +4,9 @@
     class="py-4 py-sm-5">
     <div class="container-fluid px-0">
       <header class="header-summary mb-4 mb-sm-5 d-xl-flex align-items-xl-center">
-        <h2 class="mb-0 mr-xl-5 text-primary text-center text-xl-left">
+        <!-- <h2 class="mb-0 mr-xl-5 text-primary text-center text-xl-left">
           {{ $t('main.title') }}
-        </h2>
+        </h2> -->
         <button class="add-product btn btn-primary d-none d-xl-block">
           {{ $t('main.add-product-btn') }}
         </button>

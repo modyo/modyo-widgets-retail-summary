@@ -1,32 +1,4 @@
 {
-  "date": {
-    "format": {
-      "lang": "es",
-      "long": "dd MMMM yyyy",
-      "short": "DD/MM/YYYY"
-    }
-  },
-  "currency": {
-    "format": {
-      "symbol": "$",
-      "precision": 0,
-      "separator": ".",
-      "decimal": ",",
-      "formatWithSymbol": true
-    }
-  },
-  "card-quotas": {
-    "authorized": "Autorizado",
-    "used": "Utilizado"
-  },
-  "commons": {
-    "number": "Nº {n}",
-    "view-transactions": "Movimientos"
-  },
-  "main": {
-    "add-product-btn": "Agregar Producto",
-    "title": "Resumen de Cuentas"
-  },
   "account": {
     "available-balance": "Monto Disponible",
     "credit-line": "Línea de Crédito",
@@ -39,6 +11,38 @@
     "international-availability": "Disponible Internacional",
     "national-availability": "Disponible Nacional",
     "pay": "Pagar"
+  },
+  "card-quotas": {
+    "authorized": "Autorizado",
+    "used": "Utilizado"
+  },
+  "commons": {
+    "number": "Nº {n}",
+    "view-transactions": "Movimientos"
+  },
+  "currency": {
+    "format": {
+      "decimal": ",",
+      "formatWithSymbol": true,
+      "precision": 0,
+      "separator": ".",
+      "symbol": "$"
+    }
+  },
+  "date": {
+    "format": {
+      "lang": "es",
+      "last-3-months": "Últimos 3 meses",
+      "last-6-months": "Últimos 6 meses",
+      "last-month": "Mes pasado",
+      "long": "dd MMMM yyyy",
+      "short": "DD/MM/YYYY",
+      "this-month": "Este mes"
+    }
+  },
+  "main": {
+    "add-product-btn": "Agregar Producto",
+    "title": "Resumen de Cuentas"
   },
   "transactions": {
     "recent-activity": "Últimos Movimientos"

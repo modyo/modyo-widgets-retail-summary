@@ -4,14 +4,16 @@ import axios from 'axios';
 
 Vue.use(Vuex);
 
+const LANG = window.liquid.lang;
+
+const BASE_URL = LANG === 'es-CL' ? 'https://api-bank.herokuapp.com' : 'https://dynamic-bank-api.herokuapp.com';
+
 export default new Vuex.Store({
   state: {
     accounts: [],
     cards: [],
     clientId: 1,
-  },
-  getters: {
-
+    lang: LANG,
   },
   mutations: {
     SET_CLIENT_ID(state, data) {
@@ -34,7 +36,7 @@ export default new Vuex.Store({
         .catch((err) => { throw err; });
     },
     GET_ACCOUNTS(context) {
-      return axios.get(`https://api-bank.herokuapp.com/api/v1/clients/${context.state.clientId}/accounts`, {
+      return axios.get(`${BASE_URL}/api/v1/clients/${context.state.clientId}/accounts`, {
         params: {
           'filter[include]': 'relatedAccount',
           'filter[order]': 'accountType',
@@ -46,7 +48,7 @@ export default new Vuex.Store({
         }, (err) => err.statusText);
     },
     GET_TRANSACTIONS_FOR_ACCOUNT(context, payload) {
-      return axios.get(`https://api-bank.herokuapp.com/api/v1/clients/${context.state.clientId}/accounts/${payload.accountId}/transactions/`,
+      return axios.get(`${BASE_URL}/api/v1/clients/${context.state.clientId}/accounts/${payload.accountId}/transactions/`,
         {
           params: {
             'filter[limit]': payload.limit,
@@ -55,7 +57,7 @@ export default new Vuex.Store({
         .then((transactions) => transactions, (err) => err);
     },
     GET_CARDS(context) {
-      return axios.get(`https://api-bank.herokuapp.com/api/v1/clients/${context.state.clientId}/creditCards`)
+      return axios.get(`${BASE_URL}/api/v1/clients/${context.state.clientId}/creditCards`)
         .then((creditCards) => {
           context.commit('SET_CARDS', creditCards.data);
           return creditCards;
