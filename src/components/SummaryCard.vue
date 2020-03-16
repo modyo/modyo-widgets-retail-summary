@@ -18,6 +18,7 @@
 
     <div class="card-body product-summary__body p-4">
       <card-quotas
+        v-if="!isLangEN"
         :available-quota="card.availableQuotaCLP"
         :used-quota="card.usedQuotaCLP"
         :total-quota="card.totalQuotaCLP"
@@ -83,6 +84,10 @@ export default {
   computed: {
     last4numbers() {
       return this.card.cardNumber.substr(-4, 4);
+    },
+
+    isLangEN() {
+      return this.$store.state.lang === 'en-US';
     },
   },
 };

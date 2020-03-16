@@ -123,7 +123,7 @@ export default {
       return this.account.relatedAccount;
     },
     showMovements() {
-      return this.account.accountType === 'cuenta vista';
+      return this.account.accountType === 'cuenta vista' || this.account.accountType === 'savings account';
     },
     showBar() {
       return !!this.relatedAccount;
