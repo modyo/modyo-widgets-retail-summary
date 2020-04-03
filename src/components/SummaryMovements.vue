@@ -70,7 +70,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  p.date {
+  .date {
     margin-top: -5px;
 
     small {
@@ -79,7 +79,7 @@ export default {
   }
 
   @media (min-width: 576px) {
-    p.date {
+    .date {
       margin-top: -3px;
 
       small {
