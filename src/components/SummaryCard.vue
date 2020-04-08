@@ -46,12 +46,12 @@
       <div class="col-6 px-1">
         <a
           :href="'transferencias/transferir?client=' + clientId + '&card=' + card.id"
-          class="btn btn-primary btn-block py-2">{{ $t('card.pay') }}</a>
+          class="product-summary__footer-btn btn btn-primary btn-block py-2">{{ $t('card.pay') }}</a>
       </div>
       <div class="col-6 px-1">
         <a
           :href="'cuentas?client=' + clientId + '&card=' + card.id"
-          class="btn btn-primary btn-block py-2">{{ $t('commons.view-transactions') }}</a>
+          class="product-summary__footer-btn btn btn-primary btn-block py-2">{{ $t('commons.view-transactions') }}</a>
       </div>
     </div>
   </section>
@@ -113,6 +113,16 @@ export default {
 .card-header.product-summary__header:first-child {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+
+@media (max-width: 319.98px){
+  .product-summary__footer {
+    .product-summary__footer-btn {
+      font-size: .8rem;
+      padding-left: .25rem;
+      padding-right: .25rem;
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
