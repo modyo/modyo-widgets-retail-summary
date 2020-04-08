@@ -7,8 +7,7 @@
              align-items-center justify-content-between border-0">
       <h2 class="h6 mb-0 text-capitalize">
         {{ card.cardType }}
-        <br>
-        {{ $tc('commons.number',last4numbers) }}
+        <span class="d-block mt-1">{{ $tc('commons.number',last4numbers) }}</span>
       </h2>
 
       <font-awesome-icon

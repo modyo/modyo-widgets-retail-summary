@@ -7,8 +7,7 @@
              align-items-center justify-content-between border-0">
       <h2 class="mb-0 text-capitalize">
         {{ account.accountType }}
-        <br>
-        {{ $tc('commons.number', account.accountNumber) }}
+        <span class="d-block mt-1">{{ $tc('commons.number', account.accountNumber) }}</span>
       </h2>
 
       <font-awesome-icon
@@ -19,7 +18,7 @@
     <div class="card-body product-summary__body px-4 pt-4 pb-0">
       <div class="product-summary__balance text-right">
         <p class="mb-0 text-primary product-summary__amount font-weight-bold">
-          {{ account.availableBalance | currency(currencyFormat) }}
+          {{ parseFloat(account.availableBalance) | currency(currencyFormat) }}
         </p>
         <p class="product-summary__description text-primary">
           {{ $t('account.current-balance') }}
