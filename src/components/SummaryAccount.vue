@@ -73,15 +73,15 @@
     </div>
 
     <div class="card-footer d-flex product-summary__footer bg-transparent border-0 p-4">
-      <div class="col-6 px-1">
+      <div class="col-sm-6 px-1">
         <a
           :href="'transferencias/transferir?client=' + clientId + '&account=' + account.id"
-          class="btn btn-primary btn-block py-2">{{ $t('account.transfer') }}</a>
+          class="product-summary__footer-btn btn btn-primary btn-block py-2">{{ $t('account.transfer') }}</a>
       </div>
-      <div class="col-6 px-1">
+      <div class="col-sm-6 px-1">
         <a
           :href="'cuentas?client=' + clientId + '&account=' + account.id"
-          class="btn btn-primary btn-block py-2">
+          class="product-summary__footer-btn btn btn-primary btn-block py-2">
           {{ $t('commons.view-transactions') }}
         </a>
       </div>
@@ -160,6 +160,16 @@ export default {
 .card-header.product-summary__header:first-child {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+
+@media (max-width: 319.98px){
+  .product-summary__footer {
+    .product-summary__footer-btn {
+      font-size: .8rem;
+      padding-left: .25rem;
+      padding-right: .25rem;
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
