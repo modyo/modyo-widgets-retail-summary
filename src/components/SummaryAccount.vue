@@ -74,13 +74,15 @@
     <div class="card-footer d-flex product-summary__footer bg-transparent border-0 p-4">
       <div class="col-sm-6 px-1">
         <a
-          :href="'transferencias/transferir?client=' + clientId + '&account=' + account.id"
-          class="product-summary__footer-btn btn btn-primary btn-block py-2">{{ $t('account.transfer') }}</a>
+          href="#"
+          class="product-summary__footer-btn btn btn-primary btn-block py-2"
+          @click.prevent="">{{ $t('account.transfer') }}</a>
       </div>
       <div class="col-sm-6 px-1">
         <a
-          :href="'cuentas?client=' + clientId + '&account=' + account.id"
-          class="product-summary__footer-btn btn btn-primary btn-block py-2">
+          href="#"
+          class="product-summary__footer-btn btn btn-primary btn-block py-2"
+          @click.prevent="">
           {{ $t('commons.view-transactions') }}
         </a>
       </div>

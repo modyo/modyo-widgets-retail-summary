@@ -45,13 +45,15 @@
     <div class="card-footer d-flex product-summary__footer bg-transparent border-0 p-4">
       <div class="col-6 px-1">
         <a
-          :href="'transferencias/transferir?client=' + clientId + '&card=' + card.id"
-          class="product-summary__footer-btn btn btn-primary btn-block py-2">{{ $t('card.pay') }}</a>
+          href="#"
+          class="product-summary__footer-btn btn btn-primary btn-block py-2"
+          @click.prevent="">{{ $t('card.pay') }}</a>
       </div>
       <div class="col-6 px-1">
         <a
-          :href="'cuentas?client=' + clientId + '&card=' + card.id"
-          class="product-summary__footer-btn btn btn-primary btn-block py-2">{{ $t('commons.view-transactions') }}</a>
+          href="#"
+          class="product-summary__footer-btn btn btn-primary btn-block py-2"
+          @click.prevent="">{{ $t('commons.view-transactions') }}</a>
       </div>
     </div>
   </section>
