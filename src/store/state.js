@@ -1,4 +1,4 @@
-const LANG = window.liquid.lang;
+const LANG = window.liquid ? window.liquid.lang : 'es-CL';
 
 export default {
   accounts: [],

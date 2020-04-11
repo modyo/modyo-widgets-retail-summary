@@ -7,8 +7,7 @@
              align-items-center justify-content-between border-0">
       <h2 class="mb-0 text-capitalize">
         {{ account.accountType }}
-        <br>
-        {{ $tc('commons.number', account.accountNumber) }}
+        <span class="d-block mt-1">{{ $tc('commons.number', account.accountNumber) }}</span>
       </h2>
 
       <font-awesome-icon
@@ -19,7 +18,7 @@
     <div class="card-body product-summary__body px-4 pt-4 pb-0">
       <div class="product-summary__balance text-right">
         <p class="mb-0 text-primary product-summary__amount font-weight-bold">
-          {{ account.availableBalance | currency(currencyFormat) }}
+          {{ parseFloat(account.availableBalance) | currency(currencyFormat) }}
         </p>
         <p class="product-summary__description text-primary">
           {{ $t('account.current-balance') }}
@@ -73,15 +72,17 @@
     </div>
 
     <div class="card-footer d-flex product-summary__footer bg-transparent border-0 p-4">
-      <div class="col-6 px-1">
+      <div class="col-sm-6 px-1">
         <a
-          :href="'transferencias/transferir?client=' + clientId + '&account=' + account.id"
-          class="btn btn-primary btn-block py-2">{{ $t('account.transfer') }}</a>
+          href="#"
+          class="product-summary__footer-btn btn btn-primary btn-block py-2"
+          @click.prevent="">{{ $t('account.transfer') }}</a>
       </div>
-      <div class="col-6 px-1">
+      <div class="col-sm-6 px-1">
         <a
-          :href="'cuentas?client=' + clientId + '&account=' + account.id"
-          class="btn btn-primary btn-block py-2">
+          href="#"
+          class="product-summary__footer-btn btn btn-primary btn-block py-2"
+          @click.prevent="">
           {{ $t('commons.view-transactions') }}
         </a>
       </div>
@@ -160,6 +161,16 @@ export default {
 .card-header.product-summary__header:first-child {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+
+@media (max-width: 319.98px){
+  .product-summary__footer {
+    .product-summary__footer-btn {
+      font-size: .8rem;
+      padding-left: .25rem;
+      padding-right: .25rem;
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
