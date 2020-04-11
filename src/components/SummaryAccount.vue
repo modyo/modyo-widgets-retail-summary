@@ -166,9 +166,10 @@ export default {
 @media (max-width: 319.98px){
   .product-summary__footer {
     .product-summary__footer-btn {
-      font-size: .8rem;
-      padding-left: .25rem;
       padding-right: .25rem;
+      padding-left: .25rem;
+
+      font-size: .8rem;
     }
   }
 }
