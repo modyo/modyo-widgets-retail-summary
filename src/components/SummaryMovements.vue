@@ -1,6 +1,6 @@
 <template>
   <div class="product-summary__movements mt-3">
-    <h4 class="h6 mb-2">
+    <h4 class="h6 mb-2 text-primary">
       <strong>{{ $t('transactions.recent-activity') }}</strong>
     </h4>
 
