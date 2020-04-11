@@ -1,16 +1,14 @@
-name: Pull Request Lint Style
+name: Stylelint
 
 on:
   pull_request:
-    types:
-      [
-        opened,
-        edited,
-        reopened,
-        synchronize
-      ]
+    branches:
+      - master
+      - develop
+    types: [ opened, edited, reopened, synchronize ]
 jobs:
-  pull-request-lint-style:
+  run-stylelint:
+    name: Run Stylelint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
