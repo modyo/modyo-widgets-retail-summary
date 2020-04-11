@@ -7,8 +7,7 @@
              align-items-center justify-content-between border-0">
       <h2 class="h6 mb-0 text-capitalize">
         {{ card.cardType }}
-        <br>
-        {{ $tc('commons.number',last4numbers) }}
+        <span class="d-block mt-1">{{ $tc('commons.number',last4numbers) }}</span>
       </h2>
 
       <font-awesome-icon
@@ -46,13 +45,15 @@
     <div class="card-footer d-flex product-summary__footer bg-transparent border-0 p-4">
       <div class="col-6 px-1">
         <a
-          :href="'transferencias/transferir?client=' + clientId + '&card=' + card.id"
-          class="btn btn-primary btn-block py-2">{{ $t('card.pay') }}</a>
+          href="#"
+          class="product-summary__footer-btn btn btn-primary btn-block py-2"
+          @click.prevent="">{{ $t('card.pay') }}</a>
       </div>
       <div class="col-6 px-1">
         <a
-          :href="'cuentas?client=' + clientId + '&card=' + card.id"
-          class="btn btn-primary btn-block py-2">{{ $t('commons.view-transactions') }}</a>
+          href="#"
+          class="product-summary__footer-btn btn btn-primary btn-block py-2"
+          @click.prevent="">{{ $t('commons.view-transactions') }}</a>
       </div>
     </div>
   </section>
@@ -114,6 +115,17 @@ export default {
 .card-header.product-summary__header:first-child {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+
+@media (max-width: 319.98px){
+  .product-summary__footer {
+    .product-summary__footer-btn {
+      padding-right: .25rem;
+      padding-left: .25rem;
+
+      font-size: .8rem;
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
