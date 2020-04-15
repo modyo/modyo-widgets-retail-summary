@@ -27,6 +27,13 @@
       "precision": 0,
       "separator": ".",
       "symbol": "$"
+    },
+    "formatDolar": {
+      "decimal": ",",
+      "formatWithSymbol": true,
+      "precision": 2,
+      "separator": ".",
+      "symbol": "US$"
     }
   },
   "date": {

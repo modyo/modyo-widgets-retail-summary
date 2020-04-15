@@ -64,8 +64,14 @@ export default {
       const percentage = Math.floor((this.usedQuota / this.totalQuota) * 100);
       return percentage;
     },
+    lang() {
+      return this.$store.state.lang;
+    },
     currencyFormat() {
-      return this.currency === 'CLP' ? this.$t('currency.format') : this.$t('currency.format', 'en-US');
+      if (this.lang === 'es-CL') {
+        return this.currency === 'CLP' ? this.$t('currency.format') : this.$t('currency.formatDolar');
+      }
+      return this.$t('currency.format', 'en-US');
     },
   },
 };
