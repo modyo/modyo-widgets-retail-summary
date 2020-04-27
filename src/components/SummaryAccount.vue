@@ -3,7 +3,7 @@
     class="product-summary card border-0 shadow"
     :class="'wrap-' + account.accountType | slug">
     <div
-      class="card-header product-summary__header py-3 px-4 bg-secondary text-light d-flex
+      class="card-header product-summary__header py-3 px-4 d-flex
              align-items-center justify-content-between border-0">
       <h2 class="mb-0 text-capitalize">
         {{ account.accountType }}
@@ -141,6 +141,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../scss/variables.scss";
+
 .product-summary.card {
   flex: 0 0 85%;
 
@@ -156,6 +158,12 @@ export default {
   &:last-child {
     margin-right: 20px;
   }
+}
+
+.product-summary__header {
+  color: $primary-100;
+
+  background-color: $secondary-20;
 }
 
 .card-header.product-summary__header:first-child {

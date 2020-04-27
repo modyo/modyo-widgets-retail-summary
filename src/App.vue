@@ -3,15 +3,6 @@
     id="summary-app"
     class="py-4 py-sm-5">
     <div class="container-fluid px-0">
-      <header class="header-summary mb-4 mb-sm-5 d-xl-flex align-items-xl-center">
-        <!-- <h2 class="mb-0 mr-xl-5 text-primary text-center text-xl-left">
-          {{ $t('main.title') }}
-        </h2> -->
-        <button class="add-product btn btn-primary d-none d-xl-block">
-          {{ $t('main.add-product-btn') }}
-        </button>
-      </header>
-
       <div
         v-if="!accounts && !cards"
         class="loading text-center pt-5">
@@ -39,6 +30,8 @@
             :key="`card-${card.id}`"
             :card="card"
             :client-id="clientId" />
+
+          <summary-add key="add" />
         </div>
       </div>
     </div>
@@ -50,12 +43,14 @@ import ScrollBooster from 'scrollbooster';
 import { getURLParams } from '@modyo/financial-commons';
 import SummaryAccount from './components/SummaryAccount.vue';
 import SummaryCard from './components/SummaryCard.vue';
+import SummaryAdd from './components/SummaryAdd.vue';
 
 export default {
   name: 'App',
   components: {
     SummaryAccount,
     SummaryCard,
+    SummaryAdd,
   },
   data() {
     return {
@@ -117,22 +112,22 @@ export default {
 };
 </script>
 
-<style lang="scss">
-  .products-viewport {
-    overflow: hidden;
+<style lang="scss" scoped>
+.products-viewport {
+  overflow: hidden;
 
-    cursor: grab;
-  }
+  cursor: grab;
+}
 
-  @media (max-width: 575.98px) {
-    .header-summary h2 {
-      font-size: 24px;
-    }
+@media (max-width: 575.98px) {
+  .header-summary h2 {
+    font-size: 24px;
   }
+}
 
-  @media (min-width: 1200px) {
-    .header-summary {
-      margin-left: 140px;
-    }
+@media (min-width: 1200px) {
+  .header-summary {
+    margin-left: 140px;
   }
+}
 </style>
