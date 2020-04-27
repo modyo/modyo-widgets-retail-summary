@@ -8,4 +8,7 @@ export default {
   SET_CARDS(state, data) {
     state.cards = data;
   },
+  SET_IS_LOADING(state, data) {
+    state.isLoading = data;
+  },
 };

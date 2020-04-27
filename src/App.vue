@@ -4,7 +4,7 @@
     class="py-4 py-sm-5">
     <div class="container-fluid px-0">
       <div
-        v-if="!accounts && !cards"
+        v-if="isLoading"
         class="loading text-center pt-5">
         <font-awesome-icon
           icon="circle-notch"
@@ -58,6 +58,9 @@ export default {
     };
   },
   computed: {
+    isLoading() {
+      return this.$store.state.isLoading;
+    },
     accounts() {
       return this.$store.state.accounts;
     },
