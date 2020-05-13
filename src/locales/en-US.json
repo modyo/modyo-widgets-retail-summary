@@ -13,7 +13,7 @@
     "pay": "Pay"
   },
   "card-quotas": {
-    "authorized": "Available Credit",
+    "authorized": "Credit Line",
     "used": "Current Balance"
   },
   "commons": {
