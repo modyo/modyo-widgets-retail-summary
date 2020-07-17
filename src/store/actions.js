@@ -7,10 +7,7 @@ export default {
   async DO_DATA_INITIALIZATION(context) {
     context.commit('SET_IS_LOADING', true);
     try {
-      const values = await Promise.all([
-        context.dispatch('GET_ACCOUNTS'),
-        context.dispatch('GET_CARDS'),
-      ]);
+      const values = await Promise.all([context.dispatch('GET_ACCOUNTS'), context.dispatch('GET_CARDS')]);
       context.commit('SET_IS_LOADING', false);
       return values;
     } catch (err) {
