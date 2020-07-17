@@ -171,7 +171,7 @@ export default {
   border-top-right-radius: 12px;
 }
 
-@media (max-width: 319.98px){
+@media (max-width: 319.98px) {
   .product-summary__footer {
     .product-summary__footer-btn {
       padding-right: .25rem;

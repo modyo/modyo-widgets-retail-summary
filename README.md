@@ -1,39 +1,46 @@
-# summary
+# Project Title
 
-![Build and Publish](https://github.com/modyo/modyo-widgets-retail-summary/workflows/Build%20and%20Publish/badge.svg)
-![ESLint](https://github.com/modyo/modyo-widgets-retail-summary/workflows/ESLint/badge.svg)
-![Stylelint](https://github.com/modyo/modyo-widgets-retail-summary/workflows/Stylelint/badge.svg)
+## Table of Contents
 
-## Project setup
++ [About](#about)
++ [Getting Started](#getting_started)
++ [Usage](#usage)
++ [Contributing](../CONTRIBUTING.md)
 
-```bash
-yarn install
+## About <a name = "about"></a>
+
+Write about 1-2 paragraphs describing the purpose of your project.
+
+## Getting Started <a name = "getting_started"></a>
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them.
+
+```
+Give examples
 ```
 
-### Compiles and hot-reloads for development
+### Installing
 
-```bash
-yarn serve
+A step by step series of examples that tell you how to get a development env running.
+
+Say what the step will be
+
+```
+Give the example
 ```
 
-### Compiles and minifies for production
+And repeat
 
-```bash
-yarn build
+```
+until finished
 ```
 
-### Run your unit tests
+End with an example of getting some data out of the system or using it for a little demo.
 
-```bash
-yarn test:unit
-```
+## Usage <a name = "usage"></a>
 
-### Lints and fixes files
-
-```bash
-yarn lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+All the js inside repositories is optional and provide basic usage of repository pattern in Vue to handle external resources consumptions.
