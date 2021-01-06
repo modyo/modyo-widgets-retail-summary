@@ -20,7 +20,7 @@
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@mathieustan/vue-datepicker": "0.2.3-rc.2",
     "@modyo/financial-commons": "1.0.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "core-js": "^3.6.5",
     "currency.js": "^2.0.0",
