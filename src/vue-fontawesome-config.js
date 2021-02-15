@@ -14,4 +14,4 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 library.add(faChevronLeft, faChevronRight, faWallet, faCircleNotch, faCreditCard, faClone);
 
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+Vue.component('FontAwesomeIcon', FontAwesomeIcon);

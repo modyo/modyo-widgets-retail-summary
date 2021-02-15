@@ -141,7 +141,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../scss/variables.scss";
+@import "../scss/variables";
 
 .product-summary.card {
   flex: 0 0 85%;
