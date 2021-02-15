@@ -22,7 +22,7 @@
         :used-quota="card.usedQuotaCLP"
         :total-quota="card.totalQuotaCLP"
         currency="CLP">
-        <template v-slot:default>
+        <template #default>
           <p class="text-primary text-right">
             {{ $t('card.national-availability') }}
           </p>
@@ -34,7 +34,7 @@
         :used-quota="card.usedQuotaUSD"
         :total-quota="card.totalQuotaUSD"
         currency="USD">
-        <template v-slot:default>
+        <template #default>
           <p class="text-primary text-right">
             {{ $t('card.international-availability') }}
           </p>
@@ -95,7 +95,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../scss/variables.scss";
+@import "../scss/variables";
 
 .product-summary.card {
   flex: 0 0 85%;
