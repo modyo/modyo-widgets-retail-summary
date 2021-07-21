@@ -18,7 +18,10 @@
   },
   "commons": {
     "number": "Nº {n}",
-    "view-transactions": "Movimientos"
+    "view-transactions": "Movimientos",
+    "try-again": "Intente de nuevo en un momento",
+    "empty": "No hay datos para mostrar",
+    "loading": "Cargando"
   },
   "currency": {
     "format": {
