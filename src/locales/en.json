@@ -18,7 +18,10 @@
   },
   "commons": {
     "number": "Nº {n}",
-    "view-transactions": "Transactions"
+    "view-transactions": "Transactions",
+    "try-again": "Try again in a while",
+    "empty": "There's no data to show",
+    "loading": "Loading..."
   },
   "currency": {
     "format": {

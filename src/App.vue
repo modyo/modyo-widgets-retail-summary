@@ -3,14 +3,32 @@
     id="summary-app"
     class="py-4 py-sm-5">
     <div class="container-fluid px-0">
-      <div
-        v-if="isLoading"
-        class="loading text-center pt-5">
-        <font-awesome-icon
-          icon="circle-notch"
-          size="5x"
-          spin />
-      </div>
+      <m-response-control
+        v-if="apiStatus"
+        class="container-lg bg-white text-center py-5"
+        :status="apiStatus">
+        <template #loading>
+          <div
+            class="loading spinner-border"
+            role="status">
+            <span class="sr-only">{{ $t('commons.loading') }}</span>
+          </div>
+        </template>
+        <template #error>
+          <div class="d-flex flex-column justify-content-center p-4">
+            <h5 class="text-center">
+              {{ $t('commons.try-again') }}
+            </h5>
+          </div>
+        </template>
+        <template #empty>
+          <div class="d-flex flex-column justify-content-center p-4">
+            <h5 class="text-center">
+              {{ $t('commons.empty') }}
+            </h5>
+          </div>
+        </template>
+      </m-response-control>
 
       <div
         v-else
@@ -40,7 +58,7 @@
 
 <script>
 import ScrollBooster from 'scrollbooster';
-import { getURLParams } from '@modyo/financial-commons';
+import { getURLParams, MResponseControl } from '@modyo/financial-commons';
 import SummaryAccount from './components/SummaryAccount.vue';
 import SummaryCard from './components/SummaryCard.vue';
 import SummaryAdd from './components/SummaryAdd.vue';
@@ -48,6 +66,7 @@ import SummaryAdd from './components/SummaryAdd.vue';
 export default {
   name: 'App',
   components: {
+    MResponseControl,
     SummaryAccount,
     SummaryCard,
     SummaryAdd,
@@ -58,8 +77,8 @@ export default {
     };
   },
   computed: {
-    isLoading() {
-      return this.$store.state.isLoading;
+    apiStatus() {
+      return this.$store.state.apiStatus;
     },
     accounts() {
       return this.$store.state.accounts;
@@ -74,15 +93,15 @@ export default {
   created() {
     const client = parseInt(getURLParams('client'), 10) || 1;
     this.$store.commit('SET_CLIENT_ID', client);
-    this.$store.dispatch('DO_DATA_INITIALIZATION').then(() => {
-      this.initProductsCarousel();
-    });
+    this.$store.dispatch('DO_DATA_INITIALIZATION')
+      .then(() => {
+        this.initProductsCarousel();
+      });
   },
   methods: {
     initProductsCarousel() {
       const { viewport } = this.$refs;
       const { content } = this.$refs;
-
       // eslint-disable-next-line no-unused-vars
       const sb = new ScrollBooster({
         viewport,
