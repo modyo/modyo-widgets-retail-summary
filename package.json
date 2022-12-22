@@ -27,7 +27,7 @@
     "currency.js": "^2.0.3",
     "date-fns": "^2.19.0",
     "jquery": "~3.6.0",
-    "liquidjs": "^9.23.3",
+    "liquidjs": "^10.0.0",
     "popper.js": "^1.16.1",
     "scrollbooster": "^3.0.2",
     "v-money": "^0.8.1",
